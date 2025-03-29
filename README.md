@@ -34,12 +34,12 @@ pip install -r requirements.txt
 ### 4️⃣ Set Up Environment Variables
 Edit the `.env` file in the project root:
 ```ini
-DATABASE_URL=postgresql://postgresql_username:postgresql_password@localhost:5432/twinpay_db
+DATABASE_URL=postgresql://postgresql_username:postgresql_password@localhost:5432/twinpay_wallet
 SECRET_KEY=your_secret_key
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
-Replace `username`, `password`, and `twinpay_db` with your PostgreSQL credentials.
+Replace `username`, `password`, and `twinpay_wallet` with your PostgreSQL credentials.
 
 ---
 
@@ -52,7 +52,7 @@ Replace `username`, `password`, and `twinpay_db` with your PostgreSQL credential
 
 ### Create a PostgreSQL Database
 ```sql
-CREATE DATABASE twinpay_db;
+CREATE DATABASE twinpay_wallet;
 CREATE USER twinpay_user WITH ENCRYPTED PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE twinpay_db TO twinpay_user;
 ```
